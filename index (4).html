@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Швейные машины, запчасти и фурнитуры</title>
+    <link rel="icon" href="/img/Без названия7_20241208190525.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .handwritten {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="bg-orange-200 flex flex-col items-center min-h-screen">
+    <audio id="button-sound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    <div class="bg-orange-500 w-full max-w-full rounded-lg p-8 handwritten shadow-lg mb-8 fixed-nav">
+        <div class="flex justify-between items-center">
+            <img alt="Логотип" class="w-23 h-36" src="/img/Без названия7_20241208190525.png"/>
+            <div class="flex space-x-9 justify-center flex-grow">
+                <a class="text-black text-3xl hover:underline hover-effect" href="#parts" onclick="playSound()">Запчасти</a>
+                <a class="text-black text-3xl hover:underline hover-effect" href="#accessories" onclick="playSound()">Фурнитуры</a>
+                <a class="text-black text-3xl hover:underline hover-effect" href="#contact" onclick="playSound()">Контакты</a>
+                <a class="text-black text-3xl hover:underline hover-effect" href="#reviews" onclick="playSound()">Отзывы</a>
+                <a class="text-black text-3xl hover:underline hover-effect" href="#faq" onclick="playSound()">FAQ</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a class="bg-pink-500 text-white px-6 py-3 rounded text-3xl hover:bg-pink-600 transition duration-300 hover-effect" href="#" onclick="playSound(); openModal()">Регистрация</a>
+                <a class="text-black text-3xl hover:underline hover-effect flex items-center" href="https://www.instagram.com/aelita.sewing.shop/" target="_blank" onclick="playSound()">
+                    <i class="fab fa-instagram mr-2"></i>Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-orange-500 w-full max-w-full rounded-lg p-8 handwritten shadow-lg mt-32">
+        <div class="bg-orange-200 p-8 rounded-lg shadow-inner">
+            <div class="text-8xl font-bold mb-6">Швейные машины</div>
+            <div class="text-5xl mb-8">Лучшие модели на рынке</div>
+            <div id="parts" class="flex justify-between items-center mb-8">
+                <div class="text-5xl">Запчасти</div>
+                <video class="bg-white p-4 rounded-lg shadow-lg hover-effect" width="800" height="800" controls>
+                    <source src="video/video_2024-12-04_15-51-25.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+            <div id="accessories" class="flex justify-between items-center mb-8">
+                <div class="text-5xl">Фурнитуры</div>
+                <video class="bg-white p-4 rounded-lg shadow-lg hover-effect" width="800" height="800" controls>
+                    <source src="video/L18面板介绍RU 2.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="text-4xl font-bold mb-4">Описание</div>
+                <div class="text-2xl mb-4">
+                    <strong>Швейные машины:</strong> Мы предлагаем широкий ассортимент швейных машин, от базовых моделей для начинающих до профессиональных машин для опытных мастеров. Наши машины отличаются высоким качеством, надежностью и простотой в использовании.
+                </div>
+                <div class="text-2xl mb-4">
+                    <strong>Запчасти:</strong> У нас вы найдете все необходимые запчасти для ремонта и обслуживания швейных машин. Мы предлагаем оригинальные запчасти от ведущих производителей, чтобы ваши машины всегда работали безупречно.
+                </div>
+                <div class="text-2xl">
+                    <strong>Фурнитуры:</strong> В нашем ассортименте также представлены различные фурнитуры для шитья, включая иглы, нитки, кнопки, молнии и многое другое. Мы предлагаем только качественные материалы, чтобы ваши изделия выглядели профессионально и долговечно.
+                </div>
+            </div>
+            <div id="reviews" class="bg-white p-8 rounded-lg shadow-lg mt-8">
+                <div class="text-4xl font-bold mb-4">Отзывы клиентов</div>
+                <div class="text-2xl mb-4">
+                    <strong>Иван Иванов:</strong> Отличные швейные машины! Пользуюсь уже несколько лет и ни разу не пожалел о покупке.
+                </div>
+                <div class="text-2xl mb-4">
+                    <strong>Мария Петрова:</strong> Очень довольна качеством запчастей. Всегда нахожу все, что нужно для ремонта.
+                </div>
+                <div class="text-2xl">
+                    <strong>Алексей Смирнов:</strong> Фурнитуры просто супер! Мои изделия теперь выглядят профессионально и стильно.
+                </div>
+            </div>
+            <div id="faq" class="bg-white p-8 rounded-lg shadow-lg mt-8">
+                <div class="text-4xl font-bold mb-4">Часто задаваемые вопросы (FAQ)</div>
+                <div class="text-2xl mb-4">
+                    <strong>Вопрос:</strong> Как выбрать швейную машину?
+                    <br>
+                    <strong>Ответ:</strong> Выбор швейной машины зависит от ваших потребностей и уровня опыта. Для начинающих подойдут базовые модели, а для профессионалов - более сложные и функциональные машины.
+                </div>
+                <div class="text-2xl mb-4">
+                    <strong>Вопрос:</strong> Какие запчасти вы предлагаете?
+                    <br>
+                    <strong>Ответ:</strong> Мы предлагаем широкий ассортимент запчастей для различных моделей швейных машин, включая иглы, шпульки, ремни и многое другое.
+                </div>
+                <div class="text-2xl">
+                    <strong>Вопрос:</strong> Как заказать фурнитуры?
+                    <br>
+                    <strong>Ответ:</strong> Вы можете заказать фурнитуры через наш сайт или связаться с нами по телефону или email для оформления заказа.
+                </div>
+            </div>
+            <div id="contact" class="bg-white p-8 rounded-lg shadow-lg mt-8">
+                <div class="text-4xl font-bold mb-4">Контакты</div>
+                <form class="text-2xl">
+                    <div class="mb-4">
+                        <label class="block mb-2" for="name">Имя:</label>
+                        <input class="w-full p-2 border rounded" id="name" name="name" type="text"/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2" for="email">Email:</label>
+                        <input class="w-full p-2 border rounded" id="email" name="email" type="email"/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block mb-2" for="message">Сообщение:</label>
+                        <textarea class="w-full p-2 border rounded" id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button class="bg-pink-500 text-white px-6 py-3 rounded text-2xl hover:bg-pink-600 transition duration-300 hover-effect" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="text-3xl font-bold mb-4">Регистрация</h2>
+            <form class="text-xl">
+                <div class="mb-4">
+                    <label class="block mb-2" for="reg-name">Имя:</label>
+                    <input class="w-full p-2 border rounded" id="reg-name" name="reg-name" type="text"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="reg-email">Email:</label>
+                    <input class="w-full p-2 border rounded" id="reg-email" name="reg-email" type="email"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block mb-2" for="reg-password">Пароль:</label>
+                    <input class="w-full p-2 border rounded" id="reg-password" name="reg-password" type="password"/>
+                </div>
+                <button class="bg-pink-500 text-white px-6 py-3 rounded text-xl hover:bg-pink-600 transition duration-300 hover-effect" type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function playSound() {
+            document.getElementById('button-sound').play();
+        }
+
+        function openModal() {
+            document.getElementById('registrationModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('registrationModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('registrationModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
